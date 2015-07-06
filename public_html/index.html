@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="model.js"></script>
+<script src="view.js"></script>
+<script src="controler.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="main">
+        <div data-role="main" class="ui-content">
+            <h2>MyApp</h2>
+            <div><p id="counter1" /></div>
+            <a id="inc" href="#main">++</a>
+            <a id="dec" href="#main">--</a>
+        </div>
+    </div> 
+
+    <div data-role="page" data-dialog="true" id="display_counter">
+        <div data-role="main" class="ui-content">
+            <div><p id="counter2" /></div>
+            <a href="#main">Go to Page One</a>
+        </div>
+    </div> 
+    
+    <script>
+        
+        // create mvc
+        var model = new Model();
+        var view = new View();
+        var controler = new Controler();
+
+        // init app
+        init();
+        
+    </script>
+    
+</body>
+</html>
