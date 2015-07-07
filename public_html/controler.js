@@ -8,8 +8,14 @@ function Controler() {
 
 // refresh Main display 
 Controler.prototype.onMainRefresh = function (e) {
-    view.updateCounter(model.count);
+    view.updateMainCounter(model.count);
     console.log("refresh main (" + model.count + ") !");
+};
+
+// refresh Main display 
+Controler.prototype.onDisplayRefresh = function (e) {
+    view.updateDisplayCounter(model.count);
+    console.log("refresh display (" + model.count + ") !");
 };
 
 // on ++ click 
